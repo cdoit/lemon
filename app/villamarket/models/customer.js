@@ -25,6 +25,12 @@ module.exports = function(sequelize, DataTypes) {
         allowNull: true,
         comment: "生日"
       },
+      telphone: {
+        field: "telphone",
+        type: DataTypes.STRING(10),
+        allowNull: true,
+        comment: "联系电话"
+      },
       registertime: {
         field: "registertime",
         type: DataTypes.DATE,

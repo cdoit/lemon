@@ -8,12 +8,19 @@ module.exports = function(sequelize, DataTypes) {
       region: { type: DataTypes.STRING(50), allowNull: false, comment: "区域" },
       area: { type: DataTypes.STRING(50), allowNull: false, comment: "面积" },
       layout: { type: DataTypes.STRING(50), allowNull: false, comment: "户型" },
-      introduce: {
+      introduce: { type: DataTypes.STRING, allowNull: false, comment: "简介" },
+      price: { type: DataTypes.STRING, allowNull: false, comment: "推荐价格" },
+      floorlevel: {
+        type: DataTypes.STRING(20),
+        allowNull: false,
+        comment: "楼层"
+      },
+      hits: { type: DataTypes.STRING, allowNull: false, comment: "点击量" },
+      recommend: {
         type: DataTypes.STRING,
         allowNull: false,
-        comment: "简介"
+        comment: "推荐指数"
       },
-      price: { type: DataTypes.STRING, allowNull: false, comment: "推荐价格" },
       created_at: { type: DataTypes.DATE, allowNull: true },
       updated_at: { type: DataTypes.DATE, allowNull: true }
     },
